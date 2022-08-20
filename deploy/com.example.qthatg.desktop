@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=qthatg
+GenericName=qthat'g
+Comment=Simple text based game in godot
+Exec=qthatg.x86_64
+Terminal=false
+PrefersNonDefaultGPU=true
+Type=Application
+Categories=Game;

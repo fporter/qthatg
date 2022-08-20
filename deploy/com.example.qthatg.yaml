@@ -1,0 +1,37 @@
+app-id: com.example.qthatg
+runtime: org.freedesktop.Platform
+runtime-version: '21.08'
+default-branch: stable
+sdk: org.freedesktop.Sdk
+command: qthatg.x86_64
+
+finish-args:
+  - --share=ipc
+  - --socket=x11
+  - --socket=wayland
+  - --socket=pulseaudio
+  - --device=all
+
+modules:
+
+  - name: local-app
+    buildsystem: simple
+
+    sources:
+      - type: file
+        path: ../bin/qthatg.x86_64
+
+      - type: file
+        path: ../bin/qthatg.pck
+      
+      - type: file
+        path: com.example.qthatg.desktop
+      
+      - type: file
+        path: com.example.qthatg.appdata.xml
+
+    build-commands:
+      - install -Dm644 $FLATPAK_ID.desktop /app/share/applications/$FLATPAK_ID.desktop
+      - install -Dm644 $FLATPAK_ID.appdata.xml /app/share/appdata/$FLATPAK_ID.appdata.xml
+      - install -Dm755 qthatg.x86_64 /app/bin/qthatg.x86_64
+      - install -Dm644 qthatg.pck /app/bin/qthatg.pck

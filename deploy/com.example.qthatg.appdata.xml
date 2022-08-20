@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+  <id>com.example.qthatg</id>
+  <name>qthat'g</name>
+  <summary>Text game made in Godot</summary>
+  <description>
+	  <p>Test flatpak for steamdeck and linux</p>
+  </description>
+  <project_license>MIT</project_license>
+  <metadata_license>MIT</metadata_license>
+  <url type="homepage">https://github.com/fporter/qthatg</url>
+  <url type="bugtracker">https://github.com/fporter/qthatg/issues</url>
+</component>
