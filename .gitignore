@@ -14,3 +14,6 @@ pak/
 
 # godot binaries
 bin/
+
+# temp files
+*~
